@@ -18,7 +18,7 @@ git branch: 'main', url: 'https://github.com/harikapelimelli/jenkins.git'
             sh 'terraform plan'
         }
     }
-    stage('apply') {
+    stage('apply ${action}') {
         steps {
             sh 'terraform apply -auto-approve'
         }
