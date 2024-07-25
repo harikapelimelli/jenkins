@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/Terraform_CICD.git'
+git branch: 'main', url: 'https://github.com/harikapelimelli/jenkins.git'
             }
         }
         stage('init') {
@@ -12,5 +12,14 @@ pipeline {
                 sh 'terraform init'
             }
         }
+        stage('plan') {
+            steps {
+                sh 'terraform  plan'
+            }
+        }
+        stage('apply')
+        sh 'terraform apply -auto-approve'
+        
+        
     }
 }
