@@ -12,3 +12,6 @@ git branch: 'main', url: 'https://github.com/harikapelimelli/jenkins.git'
                 sh 'terraform init'
             }
         }
+            
+            }
+        }
