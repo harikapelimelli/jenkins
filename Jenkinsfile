@@ -18,9 +18,9 @@ git branch: 'main', url: 'https://github.com/harikapelimelli/jenkins.git'
             sh 'terraform plan'
         }
     }
-    stage('destroy}') {
+    stage('apply/destroy') {
         steps {
-            sh 'terraform destroy -auto-approve'
+            sh 'terraform $(action) -auto-approve'
         }
     }
                     
